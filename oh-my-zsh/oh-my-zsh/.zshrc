@@ -89,8 +89,6 @@ source $ZSH/my-shortkey
 # Programming ENV
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-8.0/lib64/
 
-# source /opt/ros/indigo/setup.bash
-# source /home/siyuanliu/Documents/code/octopus/ros/devel/setup.bash
 alias vsimple='python /home/siyuanliu/Downloads/vsimple2/./server/server.py'
 
 eval $(/mnt/truenas/scratch/brewery/bin/brewery --env)

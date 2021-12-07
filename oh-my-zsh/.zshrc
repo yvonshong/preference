@@ -88,4 +88,3 @@ source $ZSH/my-shortkey
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Programming ENV
-source /root/octopus2/devel/setup.zsh
