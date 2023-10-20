@@ -1,28 +1,69 @@
 #!/bin/sh
-sudo apt install -y git terminator nfs-common openssh-server zsh python3-pip curl flameshot
-git config --global user.email "daiwei.song@tusimple.ai" 
+
+
+password=$1
+
+# apt
+sudo apt install -y git terminator nfs-common openssh-server zsh python3-pip curl flameshot tmux cloudcompare
+
+
+
+
+# git
+
+git config --global user.email "daiwei.song@outlook.com" 
 git config --global user.name "Daiwei Song"
 
+
+# zsg
 chsh -s /bin/zsh
 
-
-sudo pip install flake8
-sudo mkdir -p ~/.vim_runtime
 sudo mkdir -p ~/.oh-my-zsh
 sudo mkdir -p ~/.config
-sudo cp -R vim/* ~/.vim_runtime/
-sh ~/.vim_runtime/install_awesome_vimrc.sh
 sudo cp -R oh-my-zsh/* ~/.oh-my-zsh/
+
+
+
+# terminator
+
+
+mkdir ~/.config/terminator/
+cp terminator_config ~/.config/terminator/config
+
+
+
+
+# python
+
+# pip3 install flake8
+
+
 chsh -s /bin/zsh
 cp oh-my-zsh/.zshrc ~/
 cp flake8 ~/.config/flake8
 
+
+# vim
+sudo mkdir -p ~/.vim_runtime
+sudo cp -R vim/* ~/.vim_runtime/
+sh ~/.vim_runtime/install_awesome_vimrc.sh
+
 echo "====================="
 
+# input
 sudo apt-get install aptitude 
 
 sudo aptitude install fcitx-bin fcitx-table fcitx-config-gtk fcitx-frontend-all 
 
- # flameshot gui
+# flameshot gui
 
 echo "6. Success!"
+
+# indicator-sysmonitor
+
+sudo apt-get install -y indicator-sysmonitor
+indicator-sysmonitor &
+
+echo “set it to run on startup”
+
+echo "cpu: {cpu} gpu: {nvgpu} mem: {mem}"
