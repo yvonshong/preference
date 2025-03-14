@@ -4,7 +4,7 @@ password=$1
 
 # apt
 echo $password | sudo -S apt install -y git nfs-common openssh-server zsh curl tmux
-echo $password | sudo -S apt install -y cloudcompare terminator flameshot wireshark
+echo $password | sudo -S apt install -y cloudcompare terminator
 
 
 # printer
@@ -40,12 +40,11 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 # input
 echo $password | sudo -S apt-get install -y aptitude
-echo $password | sudo -S aptitude install -y fcitx-bin fcitx-table fcitx-config-gtk fcitx-frontend-all
+echo $password | sudo -S aptitude install -y fcitx5 fcitx-bin fcitx-table fcitx-config-gtk fcitx-frontend-all
 echo $password | sudo -S aptitude install -y qtcreator qml-module-qtquick-controls2
 
 # flameshot gui
 
-echo "6. Success!"
 
 # indicator-sysmonitor
 

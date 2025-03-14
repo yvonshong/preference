@@ -10,8 +10,10 @@ sh config.sh {password}
 - [cudnn](https://developer.nvidia.com/rdp/cudnn-download)
 
 ```shell
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt update
 ubuntu-drivers devices 
-sudo apt install nvidia-driver-470
+sudo apt install nvidia-driver-570
 ```
 
 # Web Browser
@@ -59,7 +61,21 @@ conda create -n py3.10 python=3.10
 
 echo "conda activate py3.10" >> ~/.zshrc
 echo "conda activate py3.10" >> ~/.bashrc
-
 ```
 
+## Google Cloud CLI
+- **Google Cloud CLI Installation**: [Install Google Cloud CLI](https://cloud.google.com/sdk/docs/install)
+- **Google CLoud Artifact Registry Authentication**: [Authenticate with Google Cloud Artifact Registry](https://cloud.google.com/artifact-registry/docs/docker/authentication)
 
+
+## rust
+
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain 1.81.0
+source $HOME/.cargo/env
+```
+
+# bugfix
+```bash
+sudo ln -s /usr/lib/x86_64-linux-gnu/libstdc++.so.6 ~/anaconda3/lib/libstdc++.so.6
+```
