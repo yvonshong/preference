@@ -42,6 +42,7 @@ xdg-open edge://settings/search
 - [baidu input](https://srf.baidu.com/site/guanwang_linux/index.html)
 - [Obsidian](https://obsidian.md/download)
 - [Clash](https://repo.trojan-cdn.com/clash_for_windows_pkg/LatestRelease/)
+    - [shadowsocks](https://shadowsocks.nl/)
 
 
 
@@ -64,6 +65,7 @@ echo "conda activate py3.10" >> ~/.bashrc
 ```
 
 ## Google Cloud CLI
+
 - **Google Cloud CLI Installation**: [Install Google Cloud CLI](https://cloud.google.com/sdk/docs/install)
 - **Google CLoud Artifact Registry Authentication**: [Authenticate with Google Cloud Artifact Registry](https://cloud.google.com/artifact-registry/docs/docker/authentication)
 
@@ -72,10 +74,16 @@ echo "conda activate py3.10" >> ~/.bashrc
 
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain 1.81.0
-source $HOME/.cargo/env
+echo "source $HOME/.cargo/env" >> ~/.zshrc
 ```
 
 # bugfix
 ```bash
 sudo ln -s /usr/lib/x86_64-linux-gnu/libstdc++.so.6 ~/anaconda3/lib/libstdc++.so.6
+sudo ln -s ~/anaconda3/lib/libfmt.so.9 /usr/lib/libfmt.so.9
+sudo ln -s ~/anaconda3/lib/libboost_filesystem.so.1.82.0 /usr/lib/libboost_filesystem.so.1.82.0
+sudo ln -s ~/anaconda3/lib/libboost_iostreams.so.1.82.0 /usr/lib/libboost_iostreams.so.1.82.0
+sudo ln -s ~/anaconda3/lib/libboost_atomic.so.1.82.0 /usr/lib/libboost_atomic.so.1.82.0
+
+
 ```
