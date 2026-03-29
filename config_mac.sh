@@ -15,7 +15,45 @@ fi
 
 # brew packages (macOS built-in nfs/ssh, installing essentials)
 brew install git tmux zsh python
+
+# Development & Productivity Apps (Casks)
+echo "Installing applications..."
+
+# Terminal & Dev Tools
 brew install --cask iterm2
+brew install --cask visual-studio-code
+brew install --cask cloudcompare
+brew install --cask tailscale
+brew install --cask windows-app
+
+# Communications
+brew install --cask wechat
+brew install --cask qq
+brew install --cask tencent-meeting
+brew install --cask lark
+brew install --cask telegram
+brew install --cask whatsapp
+brew install --cask line
+
+# Office, Notes & Research
+brew install --cask microsoft-office # Includes Word, Excel, PowerPoint, Outlook, OneNote
+brew install --cask onedrive
+brew install --cask notion
+brew install --cask obsidian
+brew install --cask zotero
+brew install --cask grammarly-desktop
+brew install --cask baidunetdisk
+
+# Browsers, Media & Utilities
+brew install --cask microsoft-edge
+brew install --cask neteasemusic
+brew install --cask vlc
+brew install --cask jianying-pro
+brew install --cask chatgpt
+brew install --cask cheatsheet
+brew install --cask clash-verge-rev
+brew install --cask freedownloadmanager
+brew install --cask ice
 
 # git
 git config --global user.email "yvon-shong@foxmail.com"
